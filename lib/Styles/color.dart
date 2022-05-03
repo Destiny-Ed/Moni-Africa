@@ -16,6 +16,8 @@ class AppColor {
   static Color dividerColor = const Color(0xff72777A);
   static Color red = const Color(0xffE41002);
 
+  static Color tabColor = const Color(0xffFDF8ED);
+
   static Color lightRed = const Color(0xffE66652);
 
   static Color black = const Color(0xff13163E);
