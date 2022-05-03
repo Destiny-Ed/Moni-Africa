@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:moni_app/Models/member_model.dart';
 import 'package:moni_app/Styles/color.dart';
 import 'package:moni_app/Styles/dimens.dart';
 
 class MembersListContainer extends StatefulWidget {
-  const MembersListContainer({Key? key}) : super(key: key);
+  const MembersListContainer({Key? key, this.title, this.agentsList})
+      : super(key: key);
+
+  final List<ActiveAgent>? agentsList;
+
+  final String? title;
 
   @override
   State<MembersListContainer> createState() => _MembersListContainerState();
@@ -22,14 +28,13 @@ class _MembersListContainerState extends State<MembersListContainer> {
           ),
 
           ///Header
-          Container(
-            // margin: const EdgeInsets.symmetric(vertical: 10),
+          SizedBox(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "Overdue Loans",
+                  widget.title!,
                   style: TextStyle(
                       fontSize: AppSize.listTitle, color: AppColor.black),
                 ),
