@@ -27,65 +27,90 @@ class _CusterDetailsPageState extends State<CusterDetailsPage> {
                   children: [
                     Image.asset(data.image!),
                     Text(
-                      '   Cluster purse setting',
+                      '   ${data.header}',
                       style: TextStyle(
                           fontSize: AppSize.mediumText,
                           fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
-                ListTile(
-                  contentPadding: const EdgeInsets.all(0),
-                  title: Text(
-                    'Use the link or code below to invite new member\n',
-                    style: TextStyle(fontSize: AppSize.mediumText),
+                if (data.title1 != '')
+                  ListTile(
+                    contentPadding: const EdgeInsets.all(0),
+                    title: Text(
+                      '${data.title1}\n',
+                      style: TextStyle(fontSize: AppSize.mediumText),
+                    ),
+                    subtitle: Text(
+                      data.title2!,
+                      style: TextStyle(
+                          fontSize: AppSize.average,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
-                  subtitle: Text(
-                    "Monthly upfront ",
-                    style: TextStyle(
-                        fontSize: AppSize.average, fontWeight: FontWeight.bold),
+                if (data.title3 != '')
+                  ListTile(
+                    contentPadding: const EdgeInsets.all(0),
+                    title: Text(
+                      '${data.title3}\n',
+                      style: TextStyle(fontSize: AppSize.mediumText),
+                    ),
+                    subtitle: Text(
+                      data.title4!,
+                      style: TextStyle(
+                          fontSize: AppSize.average,
+                          color: index == 4 ? AppColor.green : AppColor.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    trailing: Text(
+                      data.leadingText!,
+                      style: TextStyle(
+                          fontSize: AppSize.listTitle,
+                          fontWeight: FontWeight.bold,
+                          color: index == 5 ? AppColor.green : AppColor.pink),
+                    ),
                   ),
-                ),
-                ListTile(
-                  contentPadding: const EdgeInsets.all(0),
-                  title: Text(
-                    'Frequency of contribution\n',
-                    style: TextStyle(fontSize: AppSize.mediumText),
+                if (data.title6 != '')
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          data.title5!,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: AppSize.mediumText,
+                              color: AppColor.black),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        data.icon == null
+                            ? Text(
+                                data.title6!,
+                                style: TextStyle(
+                                    fontSize: AppSize.mediumText,
+                                    color: AppColor.grey),
+                              )
+                            : Row(
+                                children: [
+                                  Icon(
+                                    data.icon,
+                                    size: 16,
+                                    color: AppColor.pink,
+                                  ),
+                                  Text(
+                                    "  ${data.title6}",
+                                    style: TextStyle(
+                                        fontSize: AppSize.mediumText,
+                                        color: AppColor.pink),
+                                  ),
+                                ],
+                              ),
+                      ],
+                    ),
                   ),
-                  subtitle: Text(
-                    "Monthly upfront ",
-                    style: TextStyle(
-                        fontSize: AppSize.average, fontWeight: FontWeight.bold),
-                  ),
-                  trailing: Text(
-                    "Change",
-                    style: TextStyle(
-                        fontSize: AppSize.listTitle, color: AppColor.pink),
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '₦550,000,000',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: AppSize.mediumText,
-                            color: AppColor.black),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        'Your contribution is 8% of your eligible amount ',
-                        style: TextStyle(
-                            fontSize: AppSize.mediumText, color: AppColor.grey),
-                      ),
-                    ],
-                  ),
-                ),
                 const SizedBox(
                   height: 8,
                 ),
