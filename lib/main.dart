@@ -23,8 +23,10 @@ class MoniApp extends StatelessWidget {
               elevation: 0,
               color: Colors.transparent,
               centerTitle: true,
-              titleTextStyle:
-                  TextStyle(color: AppColor.white, fontSize: AppSize.bigText),
+              titleTextStyle: TextStyle(
+                  color: AppColor.white,
+                  fontSize: AppSize.bigText,
+                  fontWeight: FontWeight.bold),
               iconTheme:
                   IconThemeData(color: AppColor.white, size: AppSize.bigText)),
           fontFamily: 'DMSans'),

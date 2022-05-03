@@ -15,7 +15,7 @@ class _ClusterMainPageState extends State<ClusterMainPage> {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          expandedHeight: 500,
+          expandedHeight: 350,
           flexibleSpace: Container(
             height: 500,
             decoration: const BoxDecoration(
@@ -187,6 +187,61 @@ class _ClusterMainPageState extends State<ClusterMainPage> {
                   Divider(
                     color: AppColor.dividerColor,
                     thickness: 1,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(vertical: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ///Repayment date and day field
+                        Text(
+                          "Total interest earned",
+                          style: TextStyle(
+                            color: AppColor.grey,
+                            fontSize: AppSize.average,
+                          ),
+                        ),
+
+                        Text(
+                          "₦550,000,000",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.lightAmber,
+                            fontSize: AppSize.smallText,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Divider(
+                    color: AppColor.dividerColor,
+                    thickness: 1,
+                  ),
+
+                  Container(
+                    margin: const EdgeInsets.symmetric(vertical: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ///Repayment date and day field
+                        Text(
+                          "Total owed by members",
+                          style: TextStyle(
+                            color: AppColor.grey,
+                            fontSize: AppSize.average,
+                          ),
+                        ),
+
+                        Text(
+                          "₦550,000,000",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.white,
+                            fontSize: AppSize.smallText,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
