@@ -123,6 +123,71 @@ class _ClusterMainPageState extends State<ClusterMainPage> {
                     color: AppColor.dividerColor,
                     thickness: 1,
                   ),
+
+                  ///cluster purse balanc section
+                  Container(
+                    margin: const EdgeInsets.symmetric(vertical: 10),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Cluster purse balance',
+                            style: TextStyle(
+                                fontSize: AppSize.smallestText,
+                                color: AppColor.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ///Repayment date and day field
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "₦550,000,000",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.white,
+                                      fontSize: AppSize.average,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    "+₦550,000,000 interest today",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColor.green,
+                                        fontSize: AppSize.smallestText),
+                                  ),
+                                ],
+                              ),
+
+                              ///View Purse field
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 20),
+                                child: Text(
+                                  'View Purse',
+                                  style: TextStyle(color: AppColor.white),
+                                ),
+                                decoration: BoxDecoration(
+                                    color: AppColor.lightRed,
+                                    borderRadius: BorderRadius.circular(10)),
+                              )
+                            ],
+                          ),
+                        ]),
+                  ),
+                  Divider(
+                    color: AppColor.dividerColor,
+                    thickness: 1,
+                  ),
                 ],
               ),
             ),

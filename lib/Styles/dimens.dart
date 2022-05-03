@@ -7,5 +7,7 @@ class AppSize {
 
   static double mediumText = 14.0;
 
+  static double average = 16;
+
   static double bigText = 17.0;
 }
