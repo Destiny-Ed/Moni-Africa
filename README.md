@@ -1,6 +1,6 @@
 # Flutter Mobile Engineer Test
 
-Moni test to build provided user interface and integrate loans api [API](https://moni-staging-1.vercel.app/api/loans). The purpose of this test is to examine the developer's general knowledge of flutter.
+Moni test to build provided user interface and integrate loans [API](https://moni-staging-1.vercel.app/api/loans). The purpose of this test is to examine the developer's general knowledge of flutter.
 
 ## Fonts
 - DMSans
