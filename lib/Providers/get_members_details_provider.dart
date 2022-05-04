@@ -24,7 +24,7 @@ class MemberProvider {
     } on SocketException catch (_) {
       throw 'Connect to Internet';
     } catch (e) {
-      throw e.toString();
+      throw "Please check your internet connection";
     }
   }
 }

@@ -385,8 +385,11 @@ class _ClusterMainPageState extends State<ClusterMainPage>
               );
             } else if (snapshot.hasError) {
               return Center(
-                child: Text(snapshot.error.toString()),
-              );
+                  child: GestureDetector(
+                      onTap: () {
+                        setState(() {});
+                      },
+                      child: Image.asset('assets/internet.png')));
             } else {
               return const Center(
                 child: CircularProgressIndicator(),
